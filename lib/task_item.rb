@@ -16,6 +16,7 @@ class TaskItem
   end
 end
 
+puts "--- TaskItem ---"
 task = TaskItem.new("Buy fruits", "Apples, Bananas, Oranges and Grapes")
 puts task.print_attributes
 task.mark_as_completed
