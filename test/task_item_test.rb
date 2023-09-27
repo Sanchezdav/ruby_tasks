@@ -22,4 +22,11 @@ class TaskItemTest < Minitest::Test
       TaskItem.new("Buy fruits")
     end
   end
+
+  def test_mark_as_completed
+    task = TaskItem.new("Buy fruits", "Apples, Bananas, Oranges and Grapes")
+    refute task.completed
+    task.mark_as_completed
+    assert task.completed
+  end
 end

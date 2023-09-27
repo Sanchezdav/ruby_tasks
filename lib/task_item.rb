@@ -10,7 +10,13 @@ class TaskItem
     @description = description
     @completed = false
   end
+
+  def mark_as_completed
+    @completed = true
+  end
 end
 
 task = TaskItem.new("Buy fruits", "Apples, Bananas, Oranges and Grapes")
+puts task.print_attributes
+task.mark_as_completed
 puts task.print_attributes
