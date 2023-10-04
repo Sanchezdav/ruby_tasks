@@ -13,9 +13,13 @@ class TodoTask < TaskItem
   def status
     @completed ? "Completed" : "Pending"
   end
+
+  def get_details
+    super + "\nType: ToDo"
+  end
 end
 
-puts "--- TodoTask ---"
+puts "\n\n--- TodoTask ---"
 todo = TodoTask.new("Walk at morning", "Walk with my girlfriend and my dog")
 puts todo.print_attributes
 puts todo.status

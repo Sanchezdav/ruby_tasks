@@ -16,6 +16,10 @@ class TaskItem
   def mark_as_completed
     @completed = true
   end
+
+  def get_details
+    "Title: #{@title}\nDescription: #{@description}\nState: #{@completed ? 'Completed' : 'Pending'}"
+  end
 end
 
 puts "--- TaskItem ---"

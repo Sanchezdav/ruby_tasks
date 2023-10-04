@@ -28,9 +28,13 @@ class DeadlineTask < TaskItem
       "#{days_until} days left to due date"
     end
   end
+
+  def get_details
+    super + "\nType: Deadline"
+  end
 end
 
-puts "--- DeadlineTask ---"
+puts "\n\n--- DeadlineTask ---"
 next_month = Date.today.next_month
 deadline = DeadlineTask.new("Pay bills", "Pay internet and car", next_month)
 puts deadline.print_attributes
