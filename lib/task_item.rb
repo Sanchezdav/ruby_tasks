@@ -17,13 +17,13 @@ class TaskItem
     @completed = true
   end
 
-  def get_details
+  def details
     "Title: #{@title}\nDescription: #{@description}\nState: #{@completed ? 'Completed' : 'Pending'}"
   end
 end
 
-puts "--- TaskItem ---"
-task = TaskItem.new("Buy fruits", "Apples, Bananas, Oranges and Grapes")
+puts '--- TaskItem ---'
+task = TaskItem.new('Buy fruits', 'Apples, Bananas, Oranges and Grapes')
 puts task.print_attributes
 task.mark_as_completed
 puts task.print_attributes

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require_relative '../lib/task_manager'
 require_relative '../lib/todo_task'
@@ -6,7 +8,7 @@ require_relative '../lib/deadline_task'
 class TaskManagerTest < Minitest::Test
   def test_adding_todo_task
     manager = TaskManager.new
-    todo = TodoTask.new("Walk at morning", "Walk with my girlfriend and my dog")
+    todo = TodoTask.new('Walk at morning', 'Walk with my girlfriend and my dog')
 
     manager.add_task(todo)
 
@@ -17,7 +19,7 @@ class TaskManagerTest < Minitest::Test
   def test_adding_deadline_task
     manager = TaskManager.new
     next_month = Date.today.next_month
-    deadline = DeadlineTask.new("Pay bills", "Pay internet and car", next_month)
+    deadline = DeadlineTask.new('Pay bills', 'Pay internet and car', next_month)
 
     manager.add_task(deadline)
 
@@ -27,7 +29,7 @@ class TaskManagerTest < Minitest::Test
 
   def test_mark_task_completed
     manager = TaskManager.new
-    todo = TodoTask.new("Walk at morning", "Walk with my girlfriend and my dog")
+    todo = TodoTask.new('Walk at morning', 'Walk with my girlfriend and my dog')
 
     manager.add_task(todo)
     refute todo.completed
@@ -38,7 +40,7 @@ class TaskManagerTest < Minitest::Test
 
   def test_invalid_mark_task_completed
     manager = TaskManager.new
-    todo = TodoTask.new("Walk at morning", "Walk with my girlfriend and my dog")
+    todo = TodoTask.new('Walk at morning', 'Walk with my girlfriend and my dog')
 
     manager.add_task(todo)
     refute todo.completed
@@ -48,7 +50,7 @@ class TaskManagerTest < Minitest::Test
 
   def test_remove_task
     manager = TaskManager.new
-    todo = TodoTask.new("Walk at morning", "Walk with my girlfriend and my dog")
+    todo = TodoTask.new('Walk at morning', 'Walk with my girlfriend and my dog')
 
     manager.add_task(todo)
     assert_equal 1, manager.list_tasks.length
@@ -59,7 +61,7 @@ class TaskManagerTest < Minitest::Test
 
   def test_invalid_remove_task
     manager = TaskManager.new
-    todo = TodoTask.new("Walk at morning", "Walk with my girlfriend and my dog")
+    todo = TodoTask.new('Walk at morning', 'Walk with my girlfriend and my dog')
 
     manager.add_task(todo)
     assert_equal 1, manager.list_tasks.length

@@ -25,15 +25,18 @@ After cloning the project, run the following:
 
 # Run all the task files
 
-## Run the task manager
+### Run the task manager
 > rake task:manager
 
-## Run the task item
+### Run the task item
 > rake task:item
 
-## Run the todo task
+### Run the todo task
 > rake task:todo
 
-## Run the deadline task
+### Run the deadline task
 > rake task:deadline
+
+# Run the linter
+> rake lint
 ```
