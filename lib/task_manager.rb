@@ -80,6 +80,10 @@ puts "\n>>>> Removing last task"
 task_manager.remove_task(1)
 task_manager.list_tasks
 
+puts "\n>>>> Adding a custom attribute to a TodoTask"
+todo.add_custom_attribute('priority', 'High')
+puts todo.print_attributes
+
 # Threading logs
 # Uncomment the following lines to see the threading logs
 #
