@@ -29,6 +29,10 @@ class DeadlineTask < TaskItem
     end
   end
 
+  def overdue?
+    @due_date < Date.today
+  end
+
   def details
     "#{super}\nType: Deadline"
   end
