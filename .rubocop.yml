@@ -3,3 +3,7 @@ AllCops:
 
 Style/Documentation:
   Enabled: false
+Layout/EmptyLines:
+  Enabled: false
+Style/BlockComments:
+  Enabled: false
