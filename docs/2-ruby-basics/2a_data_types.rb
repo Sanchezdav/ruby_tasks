@@ -20,19 +20,23 @@ puts "\n\n--- String ---"
 
 ## We can use single or double quotes
 
+# Using double quotes
 # rubocop:disable Style/StringLiterals
 puts "My name is Bruce Wayne"
 puts "My name is Bruce Wayne".class
 # rubocop:enable Style/StringLiterals
 
+# Using single quotes
 puts 'My name is Bruce Wayne'
 
+# Adding single quotes to our texts
 puts "My name is, 'Batman!'"
 puts 'My name is, \'Batman!\''
 
 # --- Numbers ---
 puts "\n\n--- Numbers ---"
 
+# Integers
 puts 1
 puts 1.class
 puts 1234
@@ -40,6 +44,7 @@ puts 1234
 ## We can use underscores to make numbers more readable
 puts 1_234_567
 
+# Floats
 puts 1.0
 puts 1.0.class
 puts 3.1416
@@ -62,6 +67,7 @@ puts "\n\n--- Symbols ---"
 puts :ruby_course
 puts :ruby_course.class
 
+# Symbols are immutable
 puts :ruby_course.object_id
 puts :ruby_course.object_id
 
@@ -91,9 +97,11 @@ batman = { 'name' => 'Bruce', 'last_name' => 'Wayne' }
 puts batman
 puts batman.class
 
+# Symbols as keys
 batman_sym = { name: 'Bruce', last_name: 'Wayne' }
 puts batman_sym
 
+# Accessing values
 puts batman['name']
 puts batman['last_name']
 puts batman_sym[:name]
@@ -119,9 +127,14 @@ puts "\n\n--- Arrays ---"
 my_array = [1, 2, 3, 4, 5]
 puts my_array
 puts my_array.class
+
+# Accessing elements
 puts my_array[0]
 puts my_array[4]
+
+# Knowing the size of the array
 puts my_array.size
+puts my_array.length
 
 # Adding elements to the array
 my_array << 6
