@@ -7,3 +7,7 @@ Layout/EmptyLines:
   Enabled: false
 Style/BlockComments:
   Enabled: false
+Style/StringConcatenation:
+  Enabled: false
+Style/GlobalVars:
+  Enabled: false
